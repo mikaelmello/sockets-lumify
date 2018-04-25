@@ -13,8 +13,7 @@ using namespace Socket;
 BaseSocket::BaseSocket(int type, int flags) {
 
     // Inicializa socket_info
-    socket_info = new addrinfo;
-    std::memset(socket_info, 0, sizeof(addrinfo));
+    socket_info = (addrinfo *) calloc(1, sizeof(addrinfo));
 
     // Prenche a estrutura de endereço do socket, sempre IPv4
     socket_info->ai_family = AF_INET;
@@ -41,7 +40,8 @@ BaseSocket::BaseSocket(int socket, int type, addrinfo sInfo, const std::string& 
     }
 
     // Copia as inforamações do sInfo (sockaddr).
-    socket_info = new addrinfo(sInfo);
+    socket_info = (addrinfo *) malloc(sizeof(addrinfo));
+    memcpy(socket_info, &sInfo, sizeof(addrinfo));
 
     // Permite reuso de endereço (evita "Address already in use")
     int optval = 1;
