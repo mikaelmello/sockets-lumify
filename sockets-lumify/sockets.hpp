@@ -1,6 +1,12 @@
 #ifndef SOCKETS_H
 #define SOCKETS_H
 
+/**
+ * Copyright (c) 2018 Mikael Mello
+ * Licensed under the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *                  INCLUDES E DEFINES
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */

@@ -1,3 +1,9 @@
+/**
+ * Copyright (c) 2018 Mikael Mello
+ * Licensed under the MIT license.
+ * https://opensource.org/licenses/MIT
+ */
+ 
 #include "sockets.hpp"
 
 #include <iostream>
